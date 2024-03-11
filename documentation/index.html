@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	    <title>Dreams Chat Web - Documentation</title>
+
+	    <!-- Favicon -->
+	    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+	    <!-- Bootstrap CSS-->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+		<!-- Custom CSS-->
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+
+	<body data-spy="scroll" data-target="#sidebar-menu" data-offset="100">
+	    <div class="main-wrapper">
+
+			<div class="sidebar" id="sidebar">
+				<div class="sidebar-logo">
+					<a href="">
+						<img src="assets/img/logo.png" class="img-fluid" alt="">
+					</a>
+				</div>
+				<div class="sidebar-inner sidebar-sticky">
+					<div id="sidebar-menu" class="sidebar-menu sidebar-body">
+						<ul class="nav nav-sidebar">
+							<li class="nav-item">
+								<a class="nav-link" href="#introduction">Introduction</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#architecture">Architecture</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#install-instruction">Install Instruction</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#firebase">Firebase</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#agora">Agora</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#faq">FAQ</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="page-wrapper" id="introduction">
+				<div class="content container-fluid">
+				
+					<div class="page-header">
+						<div class="card">
+							<div class="card-body">
+								<h2>Documentation</h2>
+								<p class="lead mb-0"><strong>Dreams Chat Web</strong> - Documentation</p>
+							</div>
+						</div>
+					</div>
+					
+					<section class="widget">
+						<h3>Introduction</h3>
+						<p>DreamsChat application allow to have a Chat with friends. You can send  and share (images or videos or audio or pdf) ...etc. there is a database local to save your messages , so when user lost the internet connection he can write a message ,the message will be saved on database local and once the other user come online the app will send your message directly. Also you can delete conversation or messages.</p>
+						<ul>
+							<li>Login with Username & Password</li>
+							<li>One to one chat</li>
+							<li>Group chat</li>
+							<li>Status</li>
+							<li>Video call and Audio Call</li>
+							<li>Mute & Block User</li>
+							<li>Profile</li>
+						</ul>
+					</section>
+
+					<section class="widget" id="architecture">
+						<h3>Architecture and Install Instructions</h3>
+						<p>Here are the install instructions and architecture of the complete product for you.</p>
+						<h6>Architecture</h6>
+						<p>DreamChat is done using PHP(CodeIgnitor framework) based web application. And Database is directly used in FireBase</p>
+						<p><img src="assets/img/architecture1.jpg" class="img-fluid" alt=""></p>
+					</section>
+
+					<section class="widget" id="install-instruction">
+						<h3>Install Instruction</h3>
+						<p>To be able to install the application we just need a WebServer and a FireBase Database instance with SMS based authentication</p>
+						<h6>System Requirements</h6>
+						<p class="webserver">WebServer</p>
+						<ul>
+							<li>GoDaddy or similar hosting</li>
+							<li>ApacheServer</li>
+							<li>PHP 5.4+ (8.2.4)</li>
+						</ul>
+						<p class="webserver">FireBaseDatabase</p>
+						<ul>
+							<li>Create Project & Database</li>
+							<li>SMS Authenticationenabled</li>
+						</ul>
+						<h6 class="step">Step 1: Copy the files to the server</h6>
+						<p>You can use ‘WinSCP’ or FTP tools to copy your files to the server.
+							Copy the entier folder ‘DreamChatWeb’ to the root folder, it
+							contains the ‘index.php’ which will the first file to be called.
+							Copy the ‘DreamsChatWeb.zip’ and then unzip in the server or copy
+							as a folder.</p>
+							<p><img src="assets/img/install-img1.jpg" class="img-fluid" alt=""></p>
+							<p>Once the file is load online. Unzip the file to extract its content.</p>
+							<p><img src="assets/img/install-img2.jpg" class="img-fluid" alt=""></p>
+							<p>Once the files are loaded, make sure it has the permissions as ‘755’ so that read is possible for all users accessing</p>
+							<p><img src="assets/img/install-img3.jpg" class="img-fluid" alt=""></p>
+							<h6 class="step">Step 5: Login and Configure</h6>
+							<p>Once the configuration is done, you are now ready to connect to the website and configure the web application.</p>
+							<p>Before login to Admin you need to create a auth user in firebase database on below credentials. Once you created the firebase database, <br>Go to <b>Authentication -> Users -> To click Add User -> Then enter the Email(admin@gmail.com) and Password(123456) -> Click Add User button</b></p>. 
+							<p><img src="assets/img/auth-user.png" class="img-fluid" alt=""></p>
+							<p><img src="assets/img/create-auth-user.png" class="img-fluid" alt=""></p>
+							<p>Once the auth admin user created you can able to login the below mentioned login details.</p>
+
+							<p>
+								<strong>Admin Login Credentials</strong><br>
+								<a href="https://yourdomain.com/admin/" target="_blank"> https://yourdomain.com/admin/</a><br>
+								Username:<strong>admin@gmail.com</strong><br>
+								Password:<strong>123456</strong>
+							</p>
+					</section>
+
+					<section class="widget" id="firebase">
+						<h3>Firebase</h3>
+						<h6 class="step">Create and Configure Firebase</h6>
+						<p>Go to fierbase console -> <a href="www.firebase.google.com" target="_blank">www.firebase.google.com</a></p>
+						<p><img src="assets/img/install-img4.jpg" class="img-fluid" alt=""></p>
+						<p>Create Project</p>
+						<p><img src="assets/img/install-img5.jpg" class="img-fluid" alt=""></p>
+						<p><img src="assets/img/install-img6.jpg" class="img-fluid" alt=""></p>
+						<p>Give a resource and domain</p>
+						<p><img src="assets/img/install-img7.jpg" class="img-fluid" alt=""></p>
+						<p><img src="assets/img/install-img8.jpg" class="img-fluid" alt=""></p>
+						<p>Now WebApp is ready</p>
+						<p><img src="assets/img/install-img9.jpg" class="img-fluid" alt=""></p>
+						<h6 class="step">Step 8: Create Database</h6>
+						<p><img src="assets/img/install-img10.jpg" class="img-fluid" alt=""></p>
+						<p><img src="assets/img/install-img11.jpg" class="img-fluid" alt=""></p>
+						<p>You can get the URL for the database here</p>
+						<p><img src="assets/img/install-img12.jpg" class="img-fluid" alt=""></p>
+						<h6 class="step">Step 9: Create Storage For Image/Video Upload</h6>
+						<p>If storage is not created/configured properly Images/Video uploads will not work properly.</p>
+						<p><img src="assets/img/install-img13.jpg" class="img-fluid" alt=""></p>
+						<p>Select the region closed to where the app will be used, so that it will be faster</p>
+						<p>Here you can get the storage details</p>
+						<p><img src="assets/img/install-img14.jpg" class="img-fluid" alt=""></p>
+						<h6 class="step">Step 10: Enable Authentication</h6>
+						<p>Go to Build->Authentication</p>
+						<p><img src="assets/img/install-img15.png" class="img-fluid" alt=""></p>
+						<h6 class="step">Step 11: Hostname Configure In Firebase</h6>
+						<p>Error – if you don’t configure the hoostname you will get this error</p>
+						<p><img src="assets/img/install-img16.jpg" class="img-fluid" alt=""></p>
+						<p><img src="assets/img/install-img17.jpg" class="img-fluid" alt=""></p>
+						<p>Add your domain to the list.</p>
+						<p><img src="assets/img/install-img18.jpg" class="img-fluid" alt=""></p>
+						<h6 class="step">Step 12: Get Config And Update In Admin Panel</h6>
+						<p><img src="assets/img/install-img19.jpg" class="img-fluid" alt=""></p>
+						<p>Under General settings you can see the configuration</p>
+						<p><img src="assets/img/install-img20.jpg" class="img-fluid" alt=""></p>
+						<p>
+							<strong>Add all these config to</strong><br>
+							<a href="https://yourdomain.com/admin/" target="_blank"> https://yourdomain.com/admin/</a><br>
+							Username:<strong>admin</strong><br>
+							Password:<strong>123456</strong>
+						</p>
+						<p><img src="assets/img/install-img21.jpg" class="img-fluid" alt=""></p>
+					</section>
+
+					<section class="widget" id="agora">
+						<h3>Agora</h3>
+						<h6 class="step">Setup Agora</h6>
+						<p>1. First Create your agora account, by clicking this link, <br>
+						<a href="https://www.agora.io/en" target="_blank"> https://www.agora.io/en</a></p>
+						<p>2.Create the account by the following steps.</p>
+						<p><img src="assets/img/install-img22.jpg" class="img-fluid" alt=""></p>
+						<p>3. Create new project by providing the project name and click</p>
+						<p><img src="assets/img/install-img23.jpg" class="img-fluid" alt=""></p>
+						<p>4. Click next and close in next steps.</p>
+						<p>5. Create the new project by providing the project name and make sure the testing mode is enabled and submit</p>
+						<p>6. Change the app to live and save the project and make sure the app primary certificate is disable</p>
+						<p><img src="assets/img/install-img24.jpg" class="img-fluid" alt=""></p>
+						<p><img src="assets/img/install-img25.jpg" class="img-fluid" alt=""></p>
+						<p>Use the Appid key in Agora Settings</p>
+						<p><img src="assets/img/install-img26.jpg" class="img-fluid" alt=""></p>
+					</section>
+
+					<section class="widget" id="faq">
+						<h3>Frequently Asked Questions </h3>
+						<h6>FAQ 1 – Admin Panel settings</h6>
+						<h6 class="admin-head">Admin Dashboard</h6>
+						<p>Default page after successful login by admin. Following details are visible to admin.</p>
+						<ul>
+							<li>Total number ofusers</li>
+							<li>Total number of callcount</li>
+							<li>Total number of chatcount</li>
+							<li>UserList</li>
+						</ul>
+						<p><img src="assets/img/faq-img1.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Users</h6>
+						<p>Admin has the option to view all active and inactive users. Also, has an option to ‘Delete’</p>
+						<p><img src="assets/img/faq-img2.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Blocked Users</h6>
+						<p>Admin can view all blocked users details. Also has an option to ‘Unblock’ or ‘Delete’</p>
+						<p><img src="assets/img/faq-img3.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Chat List</h6>
+						<p>Here admin can view From chat and To chat details and chat counts. And also has an option to ‘View Chat’ or ‘Delete’</p>
+						<p><img src="assets/img/faq-img4.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">View Chat</h6>
+						<p>By clicking `View` admin can view user chat conversations.</p>
+						<p><img src="assets/img/faq-img5.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Group Chat</h6>
+						<p>Here admin can view Group chat name,Description,members number,Chat
+						count and Date. And also has an option to ‘View Chat’ or ‘Delete’.</p>
+						<p><img src="assets/img/faq-img6.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">View Group Chat</h6>
+						<p>By clicking `View` admin can view user group chat conversations.</p>
+						<p><img src="assets/img/faq-img7.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Call History</h6>
+						<p>In call history tab admin can view total cal history like Total Incoming
+						Call,Total Outgoing Call,Total Missed Call.And also has an option to ‘Delete’.</p>
+						<p><img src="assets/img/faq-img8.jpg" class="img-fluid" alt=""></p>
+
+						<h6>FAQ 2 - Web App Features</h6>
+						<h6 class="admin-head">User Signup</h6>
+						<p>Once you have entered the mobile number, Username, Password and Email, You will receive an OTP on your mobile no.</p>
+						<p><img src="assets/img/app-img1.jpg" class="img-fluid" alt=""></p>
+						<p>You received the OTP to entered it.</p>
+						<p><img src="assets/img/app-img2.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">User Login</h6>
+						<p>Once you regegistered your mobile number, username and password you have login to using Username & Password.</p>
+						<p><img src="assets/img/app-img3.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Chat</h6>
+						<p>In home page user can chat their Dreams chat registered members and user
+						can view and search profile picture and about.And also has an option to ‘Block User’ or ‘Delete Chat’</p>
+						<p><img src="assets/img/app-img4.jpg" class="img-fluid" alt=""></p>
+						<p><img src="assets/img/app-img5.jpg" class="img-fluid" alt=""></p>
+						<p>Logged in user can add friends by + button on top left side.</p>
+						<p>User can upload photos to particular friends.</p>
+						<p><img src="assets/img/app-img6.jpg" class="img-fluid" alt=""></p>
+						<p>In dreams chat users can chat with smileys.</p>
+						<p><img src="assets/img/app-img7.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Group Chat</h6>
+						<p>User can view their group members conversations,And also user can
+						change group Profile picture,Group info and group members.Also group
+						members have an option to exit group or delete chat.
+						</p>
+						<p><img src="assets/img/app-img8.jpg" class="img-fluid" alt=""></p>
+						<p>User can create their group name and descriptions for their friends or family members,etc...</p>
+						<p><img src="assets/img/app-img9.jpg" class="img-fluid" alt=""></p>
+						<p>User can add dreams chat members into created group.</p>
+						<p><img src="assets/img/app-img10.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Status</h6>
+						<p>If users post a status then all dreamchat members can see that user status in status tab.</p>
+						<p><img src="assets/img/app-img11.jpg" class="img-fluid" alt=""></p>
+						<p>Logged in users can add their status(Image) through add status(+) button.</p>
+						<p><img src="assets/img/app-img12.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Call</h6>
+						<p>In call tab user can view all their call activities like missed calls,Other calls and call logs.</p>
+						<p><img src="assets/img/app-img13.jpg" class="img-fluid" alt=""></p>
+						<p>Dreams chat users can audio or video call to their drams chat contact members.</p>
+						<p><img src="assets/img/app-img14.jpg" class="img-fluid" alt=""></p>
+						<p><img src="assets/img/app-img15.jpg" class="img-fluid" alt=""></p>
+						<h6 class="admin-head">Edit Profile</h6>
+						<p>Dreams chat users edit thier profile details like Display name,Display picture,Status.</p>
+						<p><img src="assets/img/app-img16.jpg" class="img-fluid" alt=""></p>
+					</section>
+
+				</div>
+			</div>    
+		</div>
+
+		<!-- Jquery JS -->
+	    <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+	    <!-- Bootstrap JS -->
+	    <script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- Custome JS -->
+	    <script src="assets/js/script.js"></script>
+	    
+	</body>
+</html>
